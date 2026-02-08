@@ -19,11 +19,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Mount auth routes: POST /api/auth/login, POST /api/auth/register, GET /api/auth
+app.use('/api/auth', authRoutes);
+
 app.get('/', (req, res) => {
   res.json({ message: 'Hello World' });
 });
 
-app.use('/api/auth', authRoutes);
+
 
 const PORT = process.env.PORT || 3000;
 
