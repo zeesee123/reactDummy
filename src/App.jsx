@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; //what kind of export is this dude ?
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import Navbar from './components/Navbar';
 import HomeGuest from './components/HomeGuest';
@@ -7,9 +8,15 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Terms from './components/Terms';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
+import {useEffect} from 'react';
 function App(){
 
+  // useEffect(()=>{
+  //   fetch('http://localhost:3000')
+  //   .then(response => response.json())
+  //   .then(data => console.log(data))
+  //   .catch(error => console.error('Error:', error));
+  // },[]);
 
   
 function handleSubmit(e){
